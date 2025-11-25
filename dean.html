@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dean Gibson — CV</title>
-    <link rel="stylesheet" href="dean.css" />
+
+    <!-- Layout switcher: dean.css = v1, v2.css = v2 -->
+    <link id="style-main" rel="stylesheet" href="dean.css" />
+    <link id="style-alt" rel="stylesheet" href="v2.css" disabled />
 </head>
+
 
 <body>
 <a class="sr-only" href="#main">Skip to content</a>
@@ -28,9 +32,11 @@
         </nav>
 
         <div class="nav-cta">
+            <a class="btn ghost toggle" id="styleSwitch" aria-label="Toggle layout">Layout v1</a>
             <a class="btn ghost toggle" id="themeToggle" aria-label="Toggle theme">Theme</a>
             <a class="btn primary" href="#contact">Hire me</a>
         </div>
+
     </div>
 </header>
 
@@ -499,6 +505,35 @@
             // silent
         }
     })();
+
+    // Layout switcher: dean.css (v1) <-> v2.css (v2)
+    (function(){
+        const KEY = 'dg-style';
+        const main = document.getElementById('style-main'); // dean.css
+        const alt  = document.getElementById('style-alt');  // v2.css
+        const btn  = document.getElementById('styleSwitch');
+
+        if (!main || !alt || !btn) return;
+
+        function apply(mode) {
+            const useV2 = mode === 'v2';
+            alt.disabled  = !useV2;
+            main.disabled =  useV2;
+            btn.textContent = useV2 ? 'Layout v2' : 'Layout v1';
+        }
+
+        // initial state
+        const saved = localStorage.getItem(KEY) || 'v2';
+        apply(saved);
+
+        btn.addEventListener('click', () => {
+            const current = localStorage.getItem(KEY) || 'v2';
+            const next = current === 'v2' ? 'v1' : 'v2';
+            localStorage.setItem(KEY, next);
+            apply(next);
+        });
+    })();
+
 </script>
 
 
