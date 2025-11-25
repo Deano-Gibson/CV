@@ -11,3 +11,5 @@ Single-page CV / portfolio built with plain **HTML**, **CSS**, and a little **Ja
   - Repo cards show stars, language, and last updated date.
   - Profile section shows followers and public repo count.
 - Print-friendly layout for exporting as a compact resume.
+
+## www.linkedin.com/in/dean-gibson-377153288 
