@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dean Gibson — CV</title>
 
-    <!-- Layout switcher: dean.css = v1, v2.css = v2 -->
-    <link id="style-main" rel="stylesheet" href="dean.css" />
-    <link id="style-alt" rel="stylesheet" href="v2.css" disabled />
+    <!-- Layout switcher: v1 / v2 / v3 -->
+    <link id="style-v1" rel="stylesheet" href="dean.css" />
+    <link id="style-v2" rel="stylesheet" href="v2.css" disabled />
+    <link id="style-v3" rel="stylesheet" href="v3.css" disabled />
 </head>
-
 
 <body>
 <a class="sr-only" href="#main">Skip to content</a>
@@ -22,6 +22,7 @@
         </div>
         <nav class="nav-links" aria-label="Primary">
             <a href="#about">About</a>
+            <a href="#stack">Stack</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
@@ -36,44 +37,111 @@
             <a class="btn ghost toggle" id="themeToggle" aria-label="Toggle theme">Theme</a>
             <a class="btn primary" href="#contact">Hire me</a>
         </div>
-
     </div>
 </header>
 
 <main id="main" class="wrap">
-    <!-- HERO -->
-    <section class="hero" aria-label="Intro">
-        <div class="panel">
-            <span class="chip" title="Location">📍 Johannesburg, ZA</span>
-            <h1>Backend-leaning Software Developer · Kotlin · C# · React</h1>
+
+    <!-- SIMPLE HERO (top) -->
+    <section class="hero hero-simple" aria-label="Intro">
+        <div class="hero-shell">
+            <span class="chip chip-soft" title="Location">📍 Johannesburg, ZA</span>
+            <h1>Full Stack Software Developer</h1>
             <p class="sub">
-                Final-year BCAD student. I build offline-first Android apps, secure C# APIs, and clean CI/CD.
-                Kotlin MVVM with Hilt and Room/Firestore. C# (WPF/WinForms/ASP.NET). React/Next.js and TypeScript.
+                Android + .NET, offline-first mobile, secure C# APIs, and clean CI/CD.
+
+                Bachelor Degree in Computer Application Development.
             </p>
-            <div class="tags">
-                <span class="tag">Kotlin</span><span class="tag">C#</span><span class="tag">ASP.NET Core</span>
-                <span class="tag">Room</span><span class="tag">Firestore</span><span class="tag">MongoDB</span>
-                <span class="tag">PostgreSQL/SQLite</span><span class="tag">React</span><span class="tag">Next.js</span>
-                <span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Azure/AWS</span>
+
+            <div class="hero-actions">
+                <a class="btn primary" href="#projects">View projects</a>
+                <a class="btn ghost" href="#contact">Contact</a>
             </div>
 
-            <div class="tags">
-                <span class="tag">MVVM</span>
-                <span class="tag">Hilt DI</span>
-                <span class="tag">WorkManager</span>
-                <span class="tag">Firestore Rules</span>
-                <span class="tag">Prisma</span>
-                <span class="tag">Docker</span>
-                <span class="tag">GitHub Actions</span>
+            <div class="hero-meta">
+                <span class="tag">Android · Kotlin</span>
+                <span class="tag">ASP.NET Core</span>
+                <span class="tag">Offline-first</span>
+                <span class="tag">CI/CD</span>
             </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <h2>About</h2>
+        <div class="card">
+            <p>
+                I focus on reliable systems: Android clients that work offline, C# backends with clear contracts,
+                and UIs that stay predictable. I’ve delivered full apps across Android, WPF, WinForms, and React.
+                Comfortable with GitHub PRs, issues, Projects, and Actions.
+            </p>
+            <p class="muted">
+                Origin: CAT at school (IEB distinction) sparked computer science interest.
+                Also into gaming, hardware tinkering, home-lab builds (Linux + Docker), football, padel, and gym.
+            </p>
+        </div>
+    </section>
+
+    <!-- STACK SNAPSHOT (old hero repurposed) -->
+    <section id="stack" class="hero hero-detail" aria-label="Tech stack snapshot">
+        <div class="panel">
+            <h2 class="stack-heading">Tech stack snapshot</h2>
+            <p class="sub">
+                Day-to-day I work in Kotlin MVVM for Android, C# for APIs, and GitHub Actions + Docker
+                for delivery. Offline-first data, safe sync, and clear contracts between client and API.
+            </p>
+
+            <div class="stack-grid">
+                <div class="stack-col">
+                    <h3>Mobile</h3>
+                    <div class="tags">
+                        <span class="tag">Kotlin</span>
+                        <span class="tag">Jetpack</span>
+                        <span class="tag">MVVM</span>
+                        <span class="tag">Hilt DI</span>
+                        <span class="tag">Room</span>
+                        <span class="tag">WorkManager</span>
+                        <span class="tag">FCM</span>
+                        <span class="tag">Firestore Rules</span>
+                    </div>
+                </div>
+                <div class="stack-col">
+                    <h3>Backend</h3>
+                    <div class="tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">ASP.NET Core</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">SQLite/PostgreSQL</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">AuthN/Z</span>
+                        <span class="tag">AES-GCM</span>
+                        <span class="tag">Argon2id</span>
+                    </div>
+                </div>
+                <div class="stack-col">
+                    <h3>DevOps & infra</h3>
+                    <div class="tags">
+                        <span class="tag">GitHub Actions</span>
+                        <span class="tag">Semantic versioning</span>
+                        <span class="tag">Release notes</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Azure/AWS/Render</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">Home-lab</span>
+                    </div>
+                </div>
+            </div>
+
             <div class="stat-row">
                 <div class="stat"><div class="muted">Years coding</div><b>5+</b></div>
                 <div class="stat"><div class="muted">Major projects</div><b>3</b></div>
                 <div class="stat"><div class="muted">Stack focus</div><b>Android · .NET</b></div>
             </div>
         </div>
+
         <aside class="panel">
-            <h2 style="margin:0 0 8px;font-size:18px">Quick Profile</h2>
+            <h2 class="stack-side-heading">Quick profile</h2>
             <div class="list">
                 <div>
                     <div class="kv"><b>Current</b><small class="muted">BCAD — 3rd year</small></div>
@@ -93,28 +161,11 @@
                 </div>
             </div>
             <div class="spacer"></div>
-            <a class="btn" href="#about">More about me</a>
+            <a class="btn" href="#skills">Stack &amp; skills</a>
         </aside>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>About</h2>
-        <div class="card">
-            <p>
-                I focus on reliable systems: Android clients that work offline, C# backends with clear contracts,
-                and UIs that stay predictable. I’ve delivered full apps across Android, WPF, WinForms, and React.
-                Comfortable with GitHub PRs, issues, Projects, and Actions.
-            </p>
-            <p class="muted">
-                Origin: CAT at school (IEB distinction) sparked computer science interest.
-                Also into gaming, hardware tinkering, home-lab builds (Linux + Docker), football, padel, and gym.
-            </p>
-        </div>
-    </section>
-
-
-    <!-- SKILLS -->
+    <!-- SKILLS (single copy) -->
     <section id="skills">
         <h2>Skills</h2>
         <div class="grid cols-3">
@@ -130,14 +181,13 @@
                 <span class="pill">React</span><span class="pill">Next.js</span>
             </div>
             <div class="card">
-                <h3>Platforms & DB</h3>
+                <h3>Platforms &amp; DB</h3>
                 <span class="pill">Room · Firestore</span><span class="pill">SQLite</span><span class="pill">MongoDB</span>
                 <span class="pill">PostgreSQL</span><span class="pill">Azure</span><span class="pill">AWS</span>
                 <span class="pill">Docker</span><span class="pill">GitHub Actions</span>
             </div>
         </div>
     </section>
-
 
     <!-- PROJECTS -->
     <section id="projects">
@@ -190,13 +240,22 @@
                 <p class="muted">Desktop app in WPF. Data structures demo: SortedDictionary, PriorityQueue, HashSet, search filters.</p>
                 <div class="tags"><span class="tag">C#</span><span class="tag">WPF</span></div>
                 <div class="kv" style="margin-top:10px">
-                    <a class="btn" href="https://github.com/Deano-Gibson/CitizenReport" target="_blank" rel="noopener">Repo</a>
+                    <div class="kv-buttons">
+                        <a class="btn" href="https://github.com/Deano-Gibson/CitizenReport"
+                           target="_blank" rel="noopener">Repo</a>
+
+                        <!-- Swap href once you host the app -->
+                        <a class="btn ghost" href="#"
+                           aria-disabled="true"
+                           title="Live demo coming soon">Live</a>
+                    </div>
+
                     <small class="muted">
                         <span class="stars">★ —</span>
                         · <span class="repo-meta">Loading…</span>
                     </small>
-
                 </div>
+
             </article>
 
             <article class="card" data-repo="Deano-Gibson/demos-react-next">
@@ -363,8 +422,8 @@
         <div class="card">
             <div class="split">
                 <div style="flex:1">
-                    <p class="muted">Open to internships, backend roles, and Android work.</p>
-                    <p>Email: <a href="mailto:deangibson@example.com">deangibson@example.com</a></p>
+                    <p class="muted">Open to all work! internships, junior roles, frontend, backend, and database work.</p>
+                    <p>Email: <a href="mailto:deangibson03@gmail.com">deangibson03@gmail.com</a></p>
                     <p>GitHub: <a href="https://github.com/Deano-Gibson" target="_blank" rel="noopener">Deano-Gibson</a></p>
                     <p>LinkedIn: <a href="www.linkedin.com/in/dean-gibson-377153288" target="_blank" rel="noopener">Profile</a></p>
                 </div>
@@ -506,33 +565,47 @@
         }
     })();
 
-    // Layout switcher: dean.css (v1) <-> v2.css (v2)
-    (function(){
+    // Layout switcher: dean.css (v1) <-> v2.css (v2) <-> v3.css (v3)
+    (function () {
         const KEY = 'dg-style';
-        const main = document.getElementById('style-main'); // dean.css
-        const alt  = document.getElementById('style-alt');  // v2.css
-        const btn  = document.getElementById('styleSwitch');
 
-        if (!main || !alt || !btn) return;
+        const v1 = document.getElementById('style-v1'); // dean.css
+        const v2 = document.getElementById('style-v2'); // v2.css
+        const v3 = document.getElementById('style-v3'); // v3.css
+        const btn = document.getElementById('styleSwitch');
+
+        if (!v1 || !v2 || !v3 || !btn) return;
 
         function apply(mode) {
-            const useV2 = mode === 'v2';
-            alt.disabled  = !useV2;
-            main.disabled =  useV2;
-            btn.textContent = useV2 ? 'Layout v2' : 'Layout v1';
+            v1.disabled = mode !== 'v1';
+            v2.disabled = mode !== 'v2';
+            v3.disabled = mode !== 'v3';
+
+            let label;
+            switch (mode) {
+                case 'v2': label = 'Layout v2'; break;
+                case 'v3': label = 'Layout v3'; break;
+                default:   label = 'Layout v1';
+            }
+            btn.textContent = label;
         }
 
-        // initial state
-        const saved = localStorage.getItem(KEY) || 'v2';
+        // initial state (default to newest v3)
+        const saved = localStorage.getItem(KEY) || 'v3';
         apply(saved);
 
+        // cycle v1 -> v2 -> v3 -> v1 ...
         btn.addEventListener('click', () => {
-            const current = localStorage.getItem(KEY) || 'v2';
-            const next = current === 'v2' ? 'v1' : 'v2';
+            const current = localStorage.getItem(KEY) || 'v3';
+            const next =
+                current === 'v1' ? 'v2' :
+                    current === 'v2' ? 'v3' :
+                        'v1';
             localStorage.setItem(KEY, next);
             apply(next);
         });
     })();
+
 
 </script>
 
